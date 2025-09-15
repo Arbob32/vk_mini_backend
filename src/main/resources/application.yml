@@ -14,6 +14,11 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update  # Options: create, create-drop, update, validate, none (use 'create' for initial setup)
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
   h2:
     console:
       enabled: true  # Enables web-based H2 console at http://localhost:3000/h2-console

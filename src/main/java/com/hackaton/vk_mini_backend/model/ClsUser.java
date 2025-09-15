@@ -38,8 +38,8 @@ public class ClsUser implements Serializable {
     private ClsActivationStatus status;
 
     @Basic
-    @Column(name = "is_deleted", insertable = false)
-    protected Boolean isDeleted = false;
+    @Column(name = "is_deleted", nullable = false)
+    protected Boolean isDeleted;
 
     @Basic
     @Column(name = "name", nullable = false)

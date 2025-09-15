@@ -68,8 +68,8 @@ public class WebSecurityConfig {
                     .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                     .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                     .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**")
-                            .permitAll() // Добавляем этот эндпоинт отдельно
-                            .requestMatchers("/api/auth/register", "/api/auth/login", "/api/auth/refreshtoken")
+                            .permitAll()
+                            .requestMatchers("/api/auth/login/vk-service-user")
                             .permitAll()
                             .requestMatchers("/api/public/**")
                             .permitAll()
